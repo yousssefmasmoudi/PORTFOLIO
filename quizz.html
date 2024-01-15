@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="img/images.png" alt="" /></a>
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="aboutme.html" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="quizz.html" class="nav__link">Quiz</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="questions" id="quiz-container">
+      <h3 id="question"></h3>
+      <ol type="A">
+        <li class="option">
+          <span id="option0" onclick="calcScore(this)"></span>
+        </li>
+        <li class="option">
+          <span id="option1" onclick="calcScore(this)"></span>
+        </li>
+        <li class="option">
+          <span id="option2" onclick="calcScore(this)"></span>
+        </li>
+        <li class="option">
+          <span id="option3" onclick="calcScore(this)"></span>
+        </li>
+      </ol>
+      <h4 id="stat"></h4>
+    </div>
+
+    <div class="buttons" id="next-btn" >
+      <button type="button" class="next">Next</button>
+    </div>
+
+    <!-- scoreboard section -->
+    <div id="scoreboard">
+      <h3 id="score-title">Your Score</h3>
+      <h3 id="result"></h3>
+      <button type="button" id="score-btn" onclick="backToQuiz()">
+        Back to Quiz
+      </button>
+      <button type="button" id="check-answer" onclick="checkAnswer()">
+        Check Answers
+      </button>
+    </div>
+
+    <!-- answers section -->
+    <div class="answers" id="answerBank">
+        <h2>Answers</h2>
+        <ol type="1" id="answers"></ol>
+        <button type="button" id="score-btn" class="back-btn" onclick="backToQuiz()">
+          Back to Quiz
+        </button>
+    </div>
+
+    <footer class="footer">
+      <a href="mailto:youssefmasmoudi600@gmail.com" class="footer__link"
+        >youssefmasmoudi600@gmail.com</a
+      >
+      <h2 class="section__title">Connect with Me</h2>
+      <div class="social-list">
+        <a
+          href="https://www.facebook.com/youssef.masmoudi.98"
+          class="social-icon"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/youssef-masmoudi-12a748249/"
+          class="social-icon"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/youssef_masmoudi/"
+          class="social-icon"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="js/index.js"></script>
+  </body>
+</html>
